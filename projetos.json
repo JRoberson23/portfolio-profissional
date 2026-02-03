@@ -5,7 +5,7 @@
         "descricao": "Aplicação web completa com FastAPI, banco de dados MySQL e interface responsiva",
         "tecnologias": ["Python", "FastAPI", "MySQL", "HTML5", "CSS3", "JavaScript", "Dashboard Admin"],
         "link": "https://nandolab3d.onrender.com/",
-        "imagem": ""
+        "imagem": "imagens/Logo.png"
     },
     {
         "id": 1,
@@ -13,6 +13,6 @@
         "descricao": "Site estático exibindo +20 certificações técnicas",
         "tecnologias": ["HTML5", "CSS3", "JavaScript", "GitHub Pages"],
         "link": "https://jroberson23.github.io/portfolio-certificacoes/",
-        "imagem": ""
+        "imagem": "imagens/android-chrome-512x512.png"
     }
 ]
