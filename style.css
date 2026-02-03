@@ -396,25 +396,25 @@ footer h3 {
     animation: extremo-horizontal 3s ease-in-out infinite !important;
 }
 
-/* Animação que vai das extremidades */
+/* Animação que vai da esquerda para a direita */
 @keyframes extremo-horizontal {
     0% {
-        transform: translateX(-100px); /* Bem na esquerda */
+        transform: translateX(-100px); 
     }
     20% {
-        transform: translateX(-50px); /* Meio caminho da esquerda */
+        transform: translateX(-50px); 
     }
     40% {
-        transform: translateX(0); /* Centro */
+        transform: translateX(0); 
     }
     60% {
-        transform: translateX(50px); /* Meio caminho da direita */
+        transform: translateX(50px); 
     }
     80% {
-        transform: translateX(100px); /* Bem na direita */
+        transform: translateX(100px); 
     }
     100% {
-        transform: translateX(-100px); /* Volta para esquerda */
+        transform: translateX(-100px); 
     }
 }
 
@@ -505,5 +505,52 @@ footer h3 {
     
     .projeto-imagem {
         height: 180px;
+    }
+}
+
+/* ========== LOADING STATE PARA PROJETOS ========== */
+
+#projetos-container:empty {
+    position: relative;
+    min-height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    grid-column: 1 / -1;
+}
+
+#projetos-container:empty::before {
+    content: "";
+    width: 50px;
+    height: 50px;
+    border: 5px solid #f3f3f3;
+    border-top: 5px solid #0a66c2;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin-right: 15px;
+}
+
+#projetos-container:empty::after {
+    content: "Carregando projetos...";
+    font-size: 1.1rem;
+    color: #666;
+    font-weight: 500;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Responsividade do loading */
+@media (max-width: 768px) {
+    #projetos-container:empty::before {
+        width: 40px;
+        height: 40px;
+        margin-right: 10px;
+    }
+    
+    #projetos-container:empty::after {
+        font-size: 1rem;
     }
 }

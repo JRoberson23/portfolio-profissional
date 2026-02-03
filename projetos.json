@@ -2,7 +2,7 @@
     {
         "id": 2,
         "nome": "NandoLab3D - Sistema Full Stack",
-        "descricao": "Aplicação web completa com FastAPI, banco de dados MySQL e interface responsiva",
+        "descricao": "Sistema Full Stack para gerenciamento de impressões 3D com dashboard administrativo, autenticação de usuários e relatórios em tempo real",
         "tecnologias": ["Python", "FastAPI", "MySQL", "HTML5", "CSS3", "JavaScript", "Dashboard Admin"],
         "link": "https://nandolab3d.onrender.com/",
         "imagem": "imagens/Logo.png"
