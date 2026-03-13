@@ -1,4 +1,8 @@
 /* RESET & BASES */
+html {
+    scroll-behavior: smooth;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -32,6 +36,11 @@ header .container {
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+.logo a {
+    text-decoration: none;
+    color: inherit;
 }
 
 .logo {
