@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repository
+      - name: Checkout code
         uses: actions/checkout@v4
 
       - name: Configure AWS credentials
@@ -22,7 +22,10 @@ jobs:
 
       - name: Sync files to S3
         run: |
-          aws s3 sync . s3://roberson-portfolio-bucket \
-          --delete \
-          --exclude ".git/*" \
-          --exclude ".github/*"
+          aws s3 sync . s3://roberson-portfolio-bucket --delete
+
+      - name: Invalidate CloudFront cache
+        run: |
+          aws cloudfront create-invalidation \
+            --distribution-id E3AOD8Y1I0J7CR \
+            --paths "/*"
