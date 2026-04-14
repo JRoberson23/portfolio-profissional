@@ -111,3 +111,29 @@ fetch('projetos.json')
 
 // Debug simplificado
 console.log('DEBUG: Script iniciado com sucesso');
+
+// Efeito de fade em loop
+document.addEventListener('DOMContentLoaded', () => {
+    const logo = document.getElementById('heroLogo');
+    const photo = document.getElementById('heroPhoto');
+    
+    if (logo && photo) {
+        function startFade() {
+            // Logo some, foto aparece
+            logo.classList.add('fade-out');
+            photo.classList.add('fade-in');
+            
+            // Após 3 segundos, reverte
+            setTimeout(() => {
+                logo.classList.remove('fade-out');
+                photo.classList.remove('fade-in');
+                
+                // Aguarda 2 segundos e recomeça
+                setTimeout(startFade, 2000);
+            }, 3000);
+        }
+        
+        // Inicia o efeito após 2 segundos
+        setTimeout(startFade, 2000);
+    }
+});
