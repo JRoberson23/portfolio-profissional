@@ -5,7 +5,7 @@
         "descricao": "Site institucional completo para funilaria, pintura e restauração automotiva. Design responsivo, animações CSS, galeria de antes/depois e CI/CD com AWS.",
         "tecnologias": ["HTML5", "CSS3", "JavaScript", "JSON", "AWS S3", "CloudFront", "GitHub Actions"],
         "link": "https://d27hxrv3bw7sur.cloudfront.net",
-        "imagem": "assets/imagens/logo-carlos.png",
+        "imagem": "imagens/logo-carlos.png",
         "github": "https://github.com/JRoberson23/carlos-funilaria"
     },    
     {
