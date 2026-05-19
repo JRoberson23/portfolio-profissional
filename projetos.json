@@ -3,7 +3,7 @@
         "id": 3,
         "nome": "Carlos Funilaria - Site Profissional",
         "descricao": "Site institucional completo para funilaria, pintura e restauração automotiva. Design responsivo, animações CSS, galeria de antes/depois e CI/CD com AWS.",
-        "tecnologias": ["HTML5", "CSS3", "JavaScript", "JSON", "AWS S3", "CloudFront", "GitHub Actions"],
+        "tecnologias": ["HTML5", "CSS3", "JavaScript", "JSON", "AWS S3 → Vercel", "CloudFront", "GitHub Actions"],
         "link": "https://carlos-funilaria.vercel.app/",
         "imagem": "imagens/logo-carlos.png",
         "github": "https://github.com/JRoberson23/carlos-funilaria"
