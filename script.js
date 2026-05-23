@@ -1,5 +1,57 @@
 console.log('Portfólio Roberson carregado!');
 
+// ========== MENU HAMBURGUER (SEM OVERLAY) ==========
+document.addEventListener('DOMContentLoaded', () => {
+    const menuToggle = document.getElementById('menuToggle');
+    const navMenu = document.getElementById('navMenu');
+    
+    function closeMenu() {
+        menuToggle.classList.remove('active');
+        navMenu.classList.remove('active');
+        document.body.style.overflow = ''; // Libera scroll
+    }
+    
+    function openMenu() {
+        menuToggle.classList.add('active');
+        navMenu.classList.add('active');
+        document.body.style.overflow = 'hidden'; // Impede scroll do fundo quando menu aberto
+    }
+    
+    function toggleMenu() {
+        if (navMenu.classList.contains('active')) {
+            closeMenu();
+        } else {
+            openMenu();
+        }
+    }
+    
+    if (menuToggle && navMenu) {
+        menuToggle.addEventListener('click', toggleMenu);
+        
+        // Fecha menu ao clicar em um link
+        navMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', closeMenu);
+        });
+        
+        // Fecha menu ao clicar fora (qualquer lugar da tela)
+        document.addEventListener('click', (event) => {
+            if (navMenu.classList.contains('active')) {
+                // Verifica se o clique foi fora do menu e fora do botão
+                if (!navMenu.contains(event.target) && !menuToggle.contains(event.target)) {
+                    closeMenu();
+                }
+            }
+        });
+        
+        // Fecha menu ao redimensionar para desktop
+        window.addEventListener('resize', () => {
+            if (window.innerWidth > 768 && navMenu.classList.contains('active')) {
+                closeMenu();
+            }
+        });
+    }
+});
+
 // Adiciona classe loading inicialmente
 document.addEventListener('DOMContentLoaded', () => {
     const container = document.getElementById('projetos-container');

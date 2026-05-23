@@ -743,3 +743,117 @@ footer h3 {
         height: 200px;
     }
 }
+
+/* ========== MENU HAMBURGUER SIMPLIFICADO ========== */
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    z-index: 200;
+    position: relative;
+}
+
+.hamburger {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background: #0a66c2;
+    margin: 5px 0;
+    transition: all 0.3s ease;
+    border-radius: 3px;
+}
+
+/* Animação do hamburguer para X */
+.menu-toggle.active .hamburger:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.menu-toggle.active .hamburger:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-toggle.active .hamburger:nth-child(3) {
+    transform: rotate(-45deg) translate(7px, -6px);
+}
+
+/* Menu para desktop */
+.nav-menu {
+    display: flex;
+    gap: 25px;
+}
+
+.nav-menu a {
+    text-decoration: none;
+    color: #555;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.nav-menu a:hover {
+    color: #0a66c2;
+}
+
+/* Responsivo - Mobile (MENU COMPACTO - SEM OVERLAY) */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+        z-index: 1001;
+    }
+    
+    .nav-menu {
+        position: fixed;
+        top: 70px;
+        right: -250px;
+        width: 200px;
+        height: auto;
+        background: white;
+        flex-direction: column;
+        gap: 0;
+        transition: right 0.3s ease;
+        box-shadow: -2px 5px 10px rgba(0,0,0,0.1);
+        z-index: 1000; /* Z-index alto para ficar acima */
+        border-radius: 0 0 0 10px;
+        padding: 0;
+    }
+    
+    .nav-menu.active {
+        right: 0;
+    }
+    
+    .nav-menu a {
+        font-size: 0.95rem;
+        padding: 12px 20px;
+        width: 100%;
+        text-align: left;
+        border-bottom: 1px solid #f0f0f0;
+        color: #555;
+        background: white;
+        pointer-events: auto; /* Garante que seja clicável */
+        cursor: pointer;
+        display: block;
+    }
+    
+    .nav-menu a:last-child {
+        border-bottom: none;
+    }
+    
+    .nav-menu a:hover {
+        background: #f8f9fa;
+        color: #0a66c2;
+    }
+}
+
+/* Ajuste para o header no mobile */
+@media (max-width: 768px) {
+    header .container {
+        position: relative;
+    }
+    
+    .logo {
+        font-size: 1.2rem;
+        z-index: 1001;
+        position: relative;
+    }
+}
