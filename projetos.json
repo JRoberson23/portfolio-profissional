@@ -1,6 +1,15 @@
 [
     {
         "id": 3,
+        "nome": "PetShop Tia Se - Site Profissional",
+        "descricao": "Site institucional totalmente responsivo, desenvolvido com Next.js, React e Tailwind CSS e animações para o PetShop Tia Se.",
+        "tecnologias": ["Next.js", "React", "Tailwind", "CSS", "Vercel", "GitHub Actions"],
+        "link": "https://petshop-tiase.vercel.app/",
+        "imagem": "imagens/logo-petshop-tiase.png",
+        "github": "https://github.com/JRoberson23/petshop-tiase"   
+    },
+    {
+        "id": 3,
         "nome": "Carlos Funilaria - Site Profissional",
         "descricao": "Site institucional completo para funilaria, pintura e restauração automotiva. Design responsivo, animações CSS, galeria de antes/depois e CI/CD com AWS.",
         "tecnologias": ["HTML5", "CSS3", "JavaScript", "JSON", "AWS S3 → Vercel", "CloudFront", "GitHub Actions"],
